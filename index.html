@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Kaelig Minkoa | Mathematical Engineering</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient-glow"></div>
+
+    <nav id="navbar">
+        <div class="brand">
+            <img src="juan.jpeg" alt="Juan Minkoa" class="avatar">
+            <span class="brand-name" data-value="Juan Minkoa">Juan Minkoa</span>
+        </div>
+        <div class="nav-links">
+            <a href="#profile" class="nav-link" onclick="handleNavClick(event, '#profile')">Profile</a>
+            <a href="#library" class="nav-link" onclick="handleNavClick(event, '#library')">Library</a>
+            <a href="#research" class="nav-link" onclick="handleNavClick(event, '#research')">Research</a>
+            <a href="#contact" class="nav-link" onclick="handleNavClick(event, '#contact')">Contact</a>
+            <a href="JUAN MINKOA RESUME.pdf" target="_blank" class="nav-link accent" data-value="Resume ↗">Resume ↗</a>
+        </div>
+    </nav>
+
+    <section class="hero container">
+        <div class="hero-grid">
+            <div class="reveal">
+                <h1 id="typewriter" class="typewriter"></h1>
+                <p style="margin-top: 2rem; font-size: 1.5rem;">
+                    Building neural architectures from mathematical <strong>First Principles</strong>.
+                </p>
+            </div>
+
+            <div class="hero-visual reveal">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 2px;">SCROLL</span>
+        </div>
+    </section>
+
+    <section id="profile" class="container">
+        <div class="glass-panel reveal">
+            <div class="grid-2">
+                <div>
+                    <h3>01 / The Learning Journey</h3>
+                    <h2 style="font-size: 2.5rem;">Deep Understanding over Abstraction Layers.</h2>
+                    <p>
+                        I am a Mathematics & Computer Science undergraduate at the <strong>University of Regina</strong>. 
+                        My intellectual journey is defined by a rigorous commitment to deriving algorithms from scratch 
+                        rather than relying on pre-built libraries.
+                    </p>
+                    <br>
+                    <p>
+                        Whether analyzing the vanishing gradient problem via eigenvalue analysis or modeling financial 
+                        time-series with stochastic processes, I focus on the mathematical heartbeat of intelligent systems.
+                    </p>
+                </div>
+                <div>
+                    <h3>Research Interests</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Matrix Analysis</span>
+                        <span class="tag">Stochastic Calculus</span>
+                        <span class="tag">Combinatorics</span>
+                        <span class="tag">Number Theory</span>
+                        <span class="tag">Deep Learning Theory</span>
+                    </div>
+                    
+                    <h3 style="margin-top: 2.5rem;">Current Focus</h3>
+                    <p style="font-size: 0.9rem;">
+                        Preparing for the <strong>Putnam Competition</strong>: Advanced proof construction and heuristics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="library" class="container">
+        <h3>02 / The Library</h3>
+        <h2>Input Data.</h2>
+        <p>A curated collection of literature shaping my understanding.</p>
+        
+        <div class="library-grid reveal">
+            <a href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618" target="_blank" rel="noopener noreferrer" class="book-card">
+                <div>
+                    <div class="book-title">Deep Learning<span class="book-arrow">↗</span></div>
+                    <div class="book-author">Goodfellow, Bengio, Courville</div>
+                </div>
+                <div class="book-desc">
+                    The fundamental text on probabilistic and algebraic underpinnings of modern AI.
+                </div>
+            </a>
+
+            <a href="https://www.amazon.ca/Putnam-Beyond-R%C4%83zvan-Gelca/dp/3319589865/ref=sr_1_1?crid=1B42DRGEJY4N5&dib=eyJ2IjoiMSJ9.MxeZFYnr2W985yr9QbnnNA.uAv8EW7yzlUAAJaz_3NqjB8v0fOKNIX7ve_dymwSrhk&dib_tag=se&keywords=putnam+and+beyond&qid=1768886154&sprefix=putna%2Caps%2C230&sr=8-1" target="_blank" rel="noopener noreferrer" class="book-card">
+                <div>
+                    <div class="book-title">Putnam and Beyond<span class="book-arrow">↗</span></div>
+                    <div class="book-author">Gelca, Andreescu</div>
+                </div>
+                <div class="book-desc">
+                    Advanced problem-solving bridging undergraduate math and creative competition problems.
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/Mathematics-Machine-Learning-Peter-Deisenroth/dp/110845514X" target="_blank" rel="noopener noreferrer" class="book-card">
+                <div>
+                    <div class="book-title">Mathematics for ML<span class="book-arrow">↗</span></div>
+                    <div class="book-author">Deisenroth, Faisal, Ong</div>
+                </div>
+                <div class="book-desc">
+                    Analytic geometry, matrix decomposition, and vector calculus for optimization.
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775" target="_blank" rel="noopener noreferrer" class="book-card">
+                <div>
+                    <div class="book-title">Intro to Linear Algebra<span class="book-arrow">↗</span></div>
+                    <div class="book-author">Gilbert Strang</div>
+                </div>
+                <div class="book-desc">
+                    The definitive guide to vector spaces and orthogonality.
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/Art-Craft-Problem-Solving-Paul-Zeitz/dp/0471789011" target="_blank" rel="noopener noreferrer" class="book-card">
+                <div>
+                    <div class="book-title">Art of Problem Solving<span class="book-arrow">↗</span></div>
+                    <div class="book-author">Paul Zeitz</div>
+                </div>
+                <div class="book-desc">
+                    Heuristics and the psychology of mathematical discovery.
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/Deep-Learning-PyTorch-Eli-Stevens/dp/1617295264" target="_blank" rel="noopener noreferrer" class="book-card">
+                <div>
+                    <div class="book-title">DL with PyTorch<span class="book-arrow">↗</span></div>
+                    <div class="book-author">Stevens, Antiga, Viehmann</div>
+                </div>
+                <div class="book-desc">
+                    Bridging the gap between tensor theory and practical implementation.
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="research" class="container">
+        <h3>03 / Research & Implementation</h3>
+        <h2>Output Data.</h2>
+        
+        <div class="reveal">
+            <div class="project-card">
+                <div class="project-index">01</div>
+                <div class="project-header">
+                    <div class="project-title">RNN & Matrix Calculus Optimization</div>
+                    <div class="project-tech">PYTHON / NUMPY / NO FRAMEWORKS</div>
+                </div>
+                <div class="grid-2">
+                    <p>
+                        Constructed a Vanilla Recurrent Neural Network using only linear algebra primitives. 
+                        Addressed the vanishing gradient problem through explicit eigenvalue analysis of weight 
+                        matrices during Backpropagation Through Time (BPTT).
+                    </p>
+                    <p>
+                        <strong>First Principles:</strong> Derived Jacobian matrices for hidden state vectors 
+                        to analyze gradient flow across temporal sequences.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-index">02</div>
+                <div class="project-header">
+                    <div class="project-title">OCR via Linear Algebra</div>
+                    <div class="project-tech">PYTHON / LINEAR ALG</div>
+                </div>
+                <div class="grid-2">
+                    <p>
+                        Architected a Multi-Layer Perceptron (MLP) from scratch to classify MNIST data. 
+                        Manually derived chain rules for ReLU and SoftMax activation functions.
+                    </p>
+                    <p>
+                        <strong>First Principles:</strong> Manual implementation of Stochastic Gradient 
+                        Descent (SGD) without automatic differentiation libraries.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-index">03</div>
+                <div class="project-header">
+                    <div class="project-title">Stochastic Financial Modeling</div>
+                    <div class="project-tech">PYTHON / PROPHET</div>
+                </div>
+                <div class="grid-2">
+                    <p>
+                        Engineered a stochastic predictive model to decompose financial data into trend, 
+                        seasonality, and holographic noise components.
+                    </p>
+                    <p>
+                        <strong>Methodology:</strong> Additive regression models to identify non-linear 
+                        growth saturations and variance shifts in time-series data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h3>04 / Protocol</h3>
+        
+        <div class="contact-layout reveal">
+            <div class="contact-info">
+                <h2 style="font-size: 3rem; line-height: 1;">
+                    Let's discuss<br>rigorous math.
+                </h2>
+                <p>
+                    I am currently open to research collaboration and engineering roles that value 
+                    mathematical depth over surface-level implementation.
+                </p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:minkoajuan@outlook.com" class="contact-row">
+                    <span class="contact-label">EMAIL</span>
+                    <span class="contact-value">minkoajuan@outlook.com</span>
+                </a>
+                
+                <a href="https://linkedin.com/in/juan-minkoa" target="_blank" class="contact-row">
+                    <span class="contact-label">NETWORK</span>
+                    <span class="contact-value">LinkedIn Profile ↗</span>
+                </a>
+
+                <a href="https://github.com/Kali2007thecodemaster" target="_blank" class="contact-row">
+                    <span class="contact-label">CODEBASE</span>
+                    <span class="contact-value">GitHub / Kali2007 ↗</span>
+                </a>
+
+                <a href="JUAN MINKOA RESUME.pdf" target="_blank" class="contact-row highlighted">
+                    <span class="contact-label">DOSSIER</span>
+                    <span class="contact-value">Download Resume ⇩</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Juan Kaelig Minkoa. Built from First Principles.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
